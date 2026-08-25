@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import "../Styles/home.css";
-import logoUrl from "../assets/img/12.png";
+import logoUrl from "../assets/img/Imagen_1-removebg-preview (1).png";
 
 const LINKS = [
 	{ label: "Sitio Web", sublabel: "imaginenationfilms.com", url: "https://imaginenationfilms.com/", tag: "01" },
-	{ label: "WhatsApp", sublabel: "Escríbenos directo", url: "https://wa.me/573173820560", tag: "02" },
+	{ label: "WhatsApp", sublabel: "Escríbenos directo", url: "https://wa.me/573209407738", tag: "02" },
 	{ label: "Instagram", sublabel: "@imaginenation.films", url: "https://www.instagram.com/imaginenation.films/", tag: "03" },
-	{ label: "YouTube", sublabel: "Nuestros proyectos", url: "https://www.youtube.com/", tag: "04" },
+	{ label: "YouTube", sublabel: "Nuestros proyectos", url: "https://www.youtube.com/@ImagineNationFilmsCo", tag: "04" },
 ];
 
 const SOCIALS = [
 	{ label: "IG", url: "https://www.instagram.com/imaginenation.films/" },
-	{ label: "WA", url: "https://wa.me/573173820560" },
+	{ label: "WA", url: "https://wa.me/573209407738" },
 	{ label: "WEB", url: "https://imaginenationfilms.com/" },
 ];
 
