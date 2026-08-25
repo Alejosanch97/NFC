@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../Styles/home.css";
-import logoUrl from "../assets/img/img2.png";
+import logoUrl from "../assets/img/12.png";
 
 const LINKS = [
 	{ label: "Sitio Web", sublabel: "imaginenationfilms.com", url: "https://imaginenationfilms.com/", tag: "01" },

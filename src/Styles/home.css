@@ -109,24 +109,33 @@
 	to { opacity: 1; transform: scale(1); }
 }
 
+
+/* NUEVO: Contenedor transparente sin recuadro */
 .inf-logo-box {
-	position: relative;
-	background: linear-gradient(160deg, #101725, var(--inf-blue));
-	border-radius: 16px;
-	padding: 22px 20px;
-	box-shadow:
-		0 0 0 1px rgba(244, 180, 0, 0.25),
-		0 20px 60px rgba(0, 0, 0, 0.6),
-		0 0 60px rgba(244, 180, 0, 0.12);
-	overflow: hidden;
+    position: relative;
+    background: transparent;
+    padding: 10px 0;
+    box-shadow: none;
+    overflow: visible;
 }
+
 .inf-logo-box::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: radial-gradient(circle at 50% 0%, rgba(244, 180, 0, 0.18), transparent 60%);
-	pointer-events: none;
+    display: none;
 }
+
+/* NUEVO: Ajuste para el PNG (limpia el fondo y mantiene solo el texto visible) */
+.inf-logo {
+    position: relative;
+    width: 100%;
+    max-width: 220px; /* Ajusta el tamaño si lo ves muy grande */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    z-index: 1;
+    filter: brightness(0) invert(1); /* Vuelve el logo completamente blanco/brillante, o quítalo si tu PNG ya es blanco o amarillo */
+}
+
+
 .inf-logo {
 	position: relative;
 	width: 100%;
@@ -352,24 +361,39 @@
     filter: contrast(120%);
 }
 
-.inf-logo-box {
-    position: relative;
-    background: linear-gradient(160deg, #101725, var(--inf-blue));
-    border-radius: 16px;
-    padding: 22px 20px;
-    box-shadow:
-        0 0 0 1px rgba(244, 180, 0, 0.25),
-        0 20px 60px rgba(0, 0, 0, 0.6),
-        0 0 60px rgba(244, 180, 0, 0.12);
-    overflow: hidden;
-}
-
 /* Agrega esto justo debajo para teñir la imagen y eliminar el impacto del blanco puro */
 .inf-logo-box img.inf-logo {
     filter: invert(1) hue-rotate(180deg) brightness(1.2); 
     mix-blend-mode: screen;
 }
 
+
+.inf-logo-box {
+    position: relative;
+    background: var(--inf-black); /* Fondo negro exacto del sitio */
+    border: none;
+    border-radius: 0;
+    padding: 10px 0;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.inf-logo-box::after {
+    display: none;
+}
+
+.inf-logo {
+    position: relative;
+    width: 100%;
+    max-width: 220px; /* Ajusta este valor si deseas cambiar el tamaño del logo */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    z-index: 1;
+    background: transparent;
+    box-shadow: none;
+    filter: none; /* Remueve filtros forzados para respetar el color original de tu PNG */
+}
 @media (max-width: 520px) {
 	.inf-corner { width: 30px; height: 30px; top: 16px; left: 16px; }
 	.inf-corner.tr { left: auto; right: 16px; }
